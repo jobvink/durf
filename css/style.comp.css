@@ -983,6 +983,9 @@ main {
     margin: auto; }
   .section-leden__leden {
     margin: 0 3rem; }
+    @media (max-width: 56.25em) {
+      .section-leden__leden {
+        margin: 0; } }
 
 .section-news {
   padding: 10rem 0; }

@@ -65,6 +65,9 @@
 
   &__leden {
     margin: 0 3rem;
+    @include respond(tab-port) {
+      margin: 0;
+    }
   }
 }
 

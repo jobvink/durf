@@ -4,6 +4,9 @@
   padding: 3rem 0;
   .news {
     @include column(4);
+    @include respond(tab-port) {
+      @include column(12);
+    }
   }
   &__link {
     @include container;

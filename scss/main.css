@@ -1006,6 +1006,11 @@ main {
     width: calc(33.3333333333% - 6rem);
     margin-left: 3rem;
     margin-right: 3rem; }
+    @media (max-width: 56.25em) {
+      .section-news-overzicht .news {
+        width: calc(100% - 6rem);
+        margin-left: 3rem;
+        margin-right: 3rem; } }
   .section-news-overzicht__link {
     max-width: 1200px;
     margin: auto;

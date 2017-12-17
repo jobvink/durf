@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+
+  &--2 {
+    background: $primary-color;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    padding: 2.5rem 10rem;
+    font-size: 3rem;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+      padding: 2.5rem 7rem;
+    }
+
+  }
+
+  &--3 {
+    color: $primary-gray-dark;
+    text-transform: uppercase;
+  }
+
+  &--p {
+    color: $primary-gray-dark;
+  }
+
+  &--grey {
+    color: $primary-gray-dark;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+  }
+}

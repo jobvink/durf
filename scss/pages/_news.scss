@@ -1,0 +1,12 @@
+.section-news-overzicht {
+  @include container;
+  @include row;
+  padding: 3rem 0;
+  .news {
+    @include column(4);
+  }
+  &__link {
+    @include container;
+    @include row;
+  }
+}

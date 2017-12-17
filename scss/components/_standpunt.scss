@@ -1,0 +1,63 @@
+.standpunt {
+  display: inline-block;
+  transition: all .3s;
+  cursor: pointer;
+  @include column(4);
+
+  @include respond(tab-land) {
+    @include column(6);
+    margin-bottom: 5rem;
+  }
+
+  @include respond(tab-port) {
+    @include column(12);
+  }
+
+  text-decoration: none;
+
+  &__image {
+    position: relative;
+    background-color: $black;
+    height: 30rem;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  &__caption {
+    transition: opacity .4s, transform .4s, background-color .4s;
+    @include center-center;
+    transform: translate(15rem, -50%);
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    opacity: 0;
+    position: absolute;
+    text-decoration: none;
+    color: $white;
+    background-color: $primary-color;
+    padding: 1rem 4rem;
+
+    &:hover {
+      background-color: darken($primary-color, 20%);
+    }
+  }
+
+  &__beschrijving {
+    height: 10rem;
+
+    @include respond(tab-port) {
+      height: 15rem;
+    }
+
+    text-align: center;
+    background-color: $primary-color;
+    color: $white;
+    padding: 3rem;
+    font-size: 3rem;
+    hyphens: auto;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

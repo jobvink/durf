@@ -1,0 +1,44 @@
+.team {
+  @include container;
+  @include row(flex-start, center);
+
+  &:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  border-bottom: 1px solid $primary-color;
+
+  padding-bottom: 6rem;
+  margin-bottom: 6rem;
+
+  &__image {
+    @include column(4);
+    @include respond(tab-port) {
+      @include column(12);
+      margin-bottom: 3rem;
+    }
+    img {
+      width: 100%;
+      @include respond(tab-port) {
+        width: 60%;
+        margin: auto;
+        display: block;
+      }
+    }
+  }
+
+  &__beschrijving {
+    @include column(8);
+    @include respond(tab-port) {
+      @include column(12);
+    }
+    hyphens: auto;
+    h2 {
+      text-transform: uppercase;
+      font-size: 4rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}

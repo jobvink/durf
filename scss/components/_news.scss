@@ -1,0 +1,35 @@
+.news {
+  display: inline-block;
+  transition: all .3s;
+  margin-bottom: 4rem;
+  @include column(6);
+
+  @include respond(tab-port) {
+    @include column(12);
+  }
+
+  text-decoration: none;
+
+  &__image {
+    height: 30rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__beschrijving {
+    background-color: $primary-color;
+    color: $white;
+    padding: 3rem;
+    font-size: 3rem;
+    hyphens: auto;
+    min-height: 30rem;
+    &--small {
+      min-height: 15rem;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+}

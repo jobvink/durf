@@ -1,0 +1,92 @@
+.story {
+  background-color: $primary-color;
+  color: $white;
+  padding: 4rem 6rem;
+
+  transform: skew(-12deg);
+
+  & > * {
+    transform: skew(12deg);
+  }
+
+  @include container;
+  @include row(flex-start, center);
+  margin: 13rem auto;
+
+  @include respond(tab-land) {
+    margin: 13rem 10rem;
+    transform: skew(0);
+    & > * {
+      transform: skew(0);
+    }
+  }
+
+  @include respond(phone) {
+    margin: 13rem 2rem;
+  }
+
+  &__shape {
+    width: 20%;
+
+    @include respond(tab-land) {
+      margin: auto;
+      display: block;
+    }
+
+    @include respond(tab-port) {
+      width: 40%;
+    }
+
+    backface-visibility: hidden;
+    transition: all .3s;
+    $circle: circle(50% at 50% 50%);
+    shape-outside: $circle;
+    clip-path: $circle;
+  }
+
+  &__image {
+    width: 100%;
+
+    clip-path: circle(50% at 50% 50%);
+    backface-visibility: hidden;
+    transition: all .3s;
+  }
+
+  &__caption {
+    @include center-center;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    width: 70%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    padding: auto 10rem;
+    backface-visibility: hidden;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      margin: 0 0 2rem 0;
+    }
+
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+  }
+
+  &:hover &__image {
+    transform: scale(1);
+    filter: brightness(.5);
+  }
+}

@@ -1,0 +1,54 @@
+.article {
+  @include container;
+  @include row;
+  padding: 5rem 0;
+
+  &__content {
+    @include column(8);
+
+    @include respond(tab-port) {
+      @include column(12);
+      margin-bottom: 5rem;
+    }
+
+    p {
+      @include not-last {
+        margin-bottom: 5rem;
+      }
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+  &__sidebar {
+    @include column(4);
+
+    @include respond(tab-port) {
+      @include column(12);
+    }
+
+    border-left: 3px solid $primary-color;
+    padding-left: 3rem;
+    ul {
+      list-style: none;
+      padding: 1rem 0 3rem 0;
+    }
+    hr {
+      margin-bottom: 3rem;
+    }
+    &--link {
+      a {
+        &:link, &:visited {
+          text-decoration: none;
+          color: $primary-gray-dark;
+        }
+        &:hover, &:focus, &:active {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$primary-color: #140078;
+//$secondairy-color: #0056BC;
+
+$color-danger: #EF5350;
+$color-gray: #e2e2e2;
+
+//colors
+$white: #fff;
+$black: #000;
+$primary-gray: #686868;
+$primary-gray-light: #eee;
+$primary-gray-dark: #333;
+
+$computer-width: 1140px;
+$tablet-width: 720px;
+$mobile-width: 540px;
+
+$grid-breakpoints: (
+        default: null,
+        computer: $computer-width,
+        tablet: $tablet-width,
+        mobile: $mobile-width,
+);
+
+$default-grid: (columns: 12, gutter: 5rem);
+$mobile-grid: (columns: 12, gutter: 4rem, media: $computer-width);
+$tablet-grid: (columns: 12, gutter: 5rem, media: $computer-width);
+$computer-grid: (columns: 12, gutter: 6rem, media: $computer-width);

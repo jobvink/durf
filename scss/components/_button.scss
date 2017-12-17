@@ -1,0 +1,27 @@
+.btn {
+  &, &:link, &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 1.5rem;
+    display: inline-block;
+    transition: transform 0.2s, opacity 0.4s;
+    position: relative;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &--default {
+    background: $primary-color;
+    color: $white;
+
+    &:hover, &:focus {
+      background: darken($primary-color, 10%);
+    }
+  }
+
+  &--center {
+    margin: auto;
+  }
+}
